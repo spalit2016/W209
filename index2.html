@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Analysis of New York City Collision Patterns</title>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="https://d3js.org/d3-queue.v3.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tooltip.css">
+  <link rel="stylesheet" href="css/tooltip2.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <style type="text/css">
+    </style>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62809346-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments) };
+    gtag('js', new Date());
+    gtag('config', 'UA-62809346-2');
+  </script>
+  <script type="text/javascript">
+    setTimeout(function(){
+      var content = $('#content'),
+       footer = $('footer'),
+       nav = $('#navigation');
+      nav.show("slow");
+content.show("slow");
+footer.show("slow");
+      },500);
+  </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="navigation" style="display: none">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Traffic Collision Patterns of New York City</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -  background image for the header  -->
+    <header class="py-5 bg-image-full" style="background-image: url('images/nwe-york-main.jpg');">
+    </header>
+    </div>
+    </section>
+    </div>
+    <div id="content" style="display: none;">
+    <!-- Content section -->
+    <section class="py-5">
+        <div class="container">
+            <h1>Traffic collisions</h1>
+            <p>The visualizations below are based on NYPD's(New York Police Department) <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95/" target="_blank">dataset</a> of every collision in NYC by location and injury from 2013 to 2018. NYPD started collecting this data to comply with the local law #11 passed by NYC council in 2011. This data is manually run every month and reviewed by the TrafficStat Unit before being posted on the NYPD website. Each record represents a collision in NYC by city, borough and cross street.</p>
+            <p>The visualizations presented here aim to minimize vehicle collisions in New York City by providing relevant insights to general New Yorkers, commuters, city planners, traffic police officials and DMV officials to help promoting commuter awareness and planning better traffic management.</p>
+        </div>    
+
+    <section class="py-5">
+      <div class="container">
+        <h1> Summary of Collisions by boroughs</h1>
+        <p>NewYork is often referred to collectively as the five boroughs.: Manhattan, Bronx, Queens, Brooklyn, and Staten Island.
+        Following map shows the breakdown of total collisions by boroughs for each year over last 4 years.</p>
+    
+      </div>
+    </section>
+
+        <div id="Dropdown" style="text-align:center">
+            Select Year: &nbsp</div>
+        
+            
+        <div id="graph1" style="text-align:center">
+          
+          <script src="js/index16.js"></script>
+        </div>
+           
+        
+
+        </div>
+
+    <section class="py-5">
+      <div class="container">
+         
+
+        <p>The following interactive visualization provides a quick overview of the collisions in New York City between the years 2013-2018. The filters enable the user to select year and types of collisions to explore the collision patterns. Additionally, borough, vehicle type and contributing factor filters facilitate further insights into the data.</p>
+
+        
+
+      <div class='tableauPlaceholder' id='viz1524108455485' style='position: relative'><div class='tableauPlaceholder' id='viz1555557639058' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Overviewgraph&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Overviewgraph' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Overviewgraph&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555557639058');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div></div>
+
+  
+
+    <section class="py-5">
+     <div class="container">
+      <h1>Collisions over Time</h1>
+      <h3>Yearly Trends</h3>
+      <div class="container">
+         
+         <p>Following Chart shows the accident breakdown in the five NY boroughs over the years from 2013-2018. When hovering over the bars, the tooltips provide info such as # and % of collisions and fatal collisions in that borough in that year.  
+         You can interact with the additional filters such as vehicle type and contributing factors to understand how these factors influence the Yearly collision patterns. </p>
+        
+       
+
+      <div class='tableauPlaceholder' id='viz1524108455485' style='position: relative'><div class='tableauPlaceholder' id='viz1555549501443' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsoveryearsinboroughs&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsoveryearsinboroughs' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsoveryearsinboroughs&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555549501443');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></div>
+
+    <section class="py-5">
+      <div class="container">
+
+      <p> Brooklyn has highest number of collisions among boroughs, followed by Queens. Interestingly, collisions involving bicycle where high in 2016 and 2017, whilst collisions involving bus was lowest in the same years. Additionally, collisions involving box truck were high in 2018.  In terms of contributing factors, “Fatigue/Drowsiness” was recorded high in 2013 to 2015 while conversely “Following too closely” was higher in the years 2016-2018.  “Backing unsafely, driver inattention and failure to yield right” are increasingly attributed to collisions over the years.</p>
+      </div>
+     </section>
+      
+    
+
+    <section class="py-5">
+     <div class="container">
+       <h3>Monthly Trends</h3>
+      
+      <p>Following line graph depicts the collision pattern over the 12 months in a year. You can interact with additional filters such as  year, vehicle type and contributing factors to understand how these factors influence the Monthly collision patterns.</p>
+
+
+
+<div class='tableauPlaceholder' id='viz1524108788072' style='position: relative'><div class='tableauPlaceholder' id='viz1555549825244' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsovermonthsinboroughs-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsovermonthsinboroughs-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsovermonthsinboroughs-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555549825244');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524108788072');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+ <section class="py-5">
+      <div class="container">
+
+      <p>  Interestingly, bicycle collisions are highest in Brooklyn followed by Manhattan and they peak during summer months. Collisions involving taxi are much higher in Manhattan when compared to other boroughs.
+      Collisions for all boroughs picked in May while February is the month with lowest collisions , presumably because of lesser number of days.</p>
+
+      </div>
+     </section>
+
+<section class="py-5">
+     <div class="container">
+       <h3>Days of the Week Trends</h3>
+      
+      <p>Following line graph depicts the collision pattern over the week in different boroughs. You can interact with additional filters such as  year, vehicle type and contributing factors to understand how these factors influence the collision patterns over different days of the week. </p>
+    
+
+<div class='tableauPlaceholder' id='viz1524809086250' style='position: relative'>
+    <div class='tableauPlaceholder' id='viz1555559395840' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsoverdayofweekinboroughs-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsoverdayofweekinboroughs-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsoverdayofweekinboroughs-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555559395840');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               </script>
+        </object>
+    </div>
+</div>
+
+<section class="py-5">
+      <div class="container">
+
+      <p> <b>Friday</b> has the <b>highest</b> while <b>weekends</b> (Saturday and Sunday) have <b>lowest</b> # of collisions.</p>.</p>
+
+      </div>
+</section>
+
+<section class="py-5">
+      <div class="container">
+        <h3>Hourly Trends</h3>
+
+        <p>Following line graph depicts the collision pattern over the 24 hours in a day in different boroughs. You can interact with additional filters such as  year, vehicle type and contributing factors to understand how these factors influence the hourly collision patterns.</p>
+
+
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1524809086250');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width='1000px';vizElement.style.height='827px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+
+
+ 
+ <div class='tableauPlaceholder' id='viz1555560181703' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsoverhoursinboroughs-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsoverhoursinboroughs-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsoverhoursinboroughs-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555560181703');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<section class="py-5">
+      <div class="container">
+        <p> Collisions involving bus peaks both in the morning and evening as seen with other visualizations. Collisions involving box trucks peak around 10.00 AM indicating the peak traffic with those type of vehicles. Many of the contributing factors indicate higher collisions in the evening hours indicating driver inattention and fatigue is high during these times.Overall Collisions peak at <b>4 PM</b>, not surprising as it is part of the rush hour.</p>
+        </div>
+</section>
+
+
+
+
+<section class="py-5">
+     <div class="container">
+      <h3>Collisions over time in a day and over the week</h3>
+
+      <p>Following heat map depicts the collision pattern over 24 hour in a day and over the weekdays.You can interact with additional filters such as month and vehicle type to understand how these factors influence the collisions in a perticular hour of the day on a given day of the week.
+      <b>Wednesdays</b> and <b>Thursdays</b> are most accident prone while weekends have much lower rate.</p>
+ 
+<div class='tableauPlaceholder' id='viz1555560655606' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;CollisionsbyDayTime-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;CollisionsbyDayTime-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;CollisionsbyDayTime-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555560655606');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+<section class="py-5">
+      <div class="container">
+        <p> Collisions are quiet common during weekdays between 8 am to 6 pm and peaks around 4-6 pm between Monday-Friday. As expected, collisions involving bus increases during the peaks hours in the morning and evenings.Passenger vehicle is by far the largest category of vehicles involved in collisions.
+      <b>Wednesdays</b> and <b>Thursdays</b> are most accident prone while weekends have much lower rate.</p>
+      </div>
+</section>
+
+    
+
+    <section class="py-5">
+      <div class="container">
+        <h1>Collisions by Vehicle Types</h1>
+          <p>Bubble graph illustrates the collision by vehicle types in each of the NY boroughs.You can interact with additional filters such as  year, time range, fatalities and contributing factors to explore further.</p>
+
+
+
+
+
+<div class='tableauPlaceholder' id='viz1524109086250' style='position: relative'><div class='tableauPlaceholder' id='viz1555549893318' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;CollisionsbyVehicleType&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;CollisionsbyVehicleType' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;CollisionsbyVehicleType&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555549893318');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524109086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<section class="py-5">
+      <div class="container">
+        <p> <b>Passenger vehicles</b> followed by <b>sport utility</b> type vehicles cause majority of collisions.  As expected in relation to the taxi traffic, these are common in Manhattan than in other boroughs.  Not surprisingly, the passenger and sport utility vehicles also cause fatal collisions.</p>
+      </div>
+</section>
+
+
+<section class="py-5">
+      <div class="container">
+        <h1>Causes for Fatal Collisions</h1>
+           <p> Following Side-by-Side bar charts shows the different contributing factors for fatal collisons involving cyclists, pedestrians and motorists. You can use additional filters such as year, time of day, and contributing factor to explore the data further. </p>
+  
+
+
+<div class='tableauPlaceholder' id='viz1524209086250' style='position: relative'><div class='tableauPlaceholder' id='viz1555550053409' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;CollisionsofFatalityGroupbyBorough&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;CollisionsofFatalityGroupbyBorough' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;CollisionsofFatalityGroupbyBorough&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555550053409');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524209086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+<section class="py-5">
+      <div class="container">
+        <p> The fatal collisions involve more <b>pedestrians</b>, followed by motorcyclist and cyclist.</p>
+      </div>
+</section>
+
+<section class="py-5">
+      <div class="container">
+       <h1>Most Dangerous Street Intersections</h1>
+         <h3> Intersections with most Collisions</h3>
+      <p> Following horizontal bar chart shows top 25 street intersections by total collisions. 
+      You can use additional filters such as year, borough, zip code, vehicle type and contributing factor to explore the data further. </p>
+      
+
+<div class='tableauPlaceholder' id='viz1524309086250' style='position: relative'><div class='tableauPlaceholder' id='viz1555550178917' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsbycrossstreet-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsbycrossstreet-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsbycrossstreet-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555550178917');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></object></div></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524309086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<section class="py-5">
+      <div class="container">
+        <p><b>3 AVENUE Cross Streets</b> had most incidents of collisions recorded over the 5 year
+period closely followed by <b>BROADWAY</b>.</p>
+      </div>
+</section>
+
+<section class="py-5">
+      <div class="container">
+        <h3> Fatal Collisions by Intersections</h3>
+      
+      <p> The geo map depicts the <b>fatal collisions</b> by location and the size of the circle depicts number of fatal collisions.You can use additional filters such as year and cross streets to explore the data further. </p></p>
+    
+    <div class='tableauPlaceholder' id='viz1555561246483' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Fatalitiesbyintersection&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Fatalitiesbyintersection' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Fatalitiesbyintersection&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555561246483');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               </script>
+<section class="py-5">
+      <div class="container">
+        <p>The most dangerous intersection is West Houston Street and West Street in Manhattan as 8 persons were killed in collision there.</p>
+      </div>
+</section>
+
+<section class="py-5">
+      <div class="container">
+        <h1>Collisions by zip codes</h1>
+        <p>The following chart depicts collisions by zip code. You can use additional filters such as year, borough, vehicle type and contributing factor to explore the data further.
+
+       
+
+
+
+<div class='tableauPlaceholder' id='viz1524409086250' style='position: relative'><div class='tableauPlaceholder' id='viz1555551615838' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsbyzipcode-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsbyzipcode-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsbyzipcode-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555551615838');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></div></object></div></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524409086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<section class="py-5">
+      <div class="container">
+         <p>Top 5 Zip Codes with highest incidents of collisions over 5 year period are : 11207,
+11101,10016,10019 and 10022.</p>
+      </div>
+</section>
+
+<section class="py-5">
+      <div class="container">
+      <h1>Causes for the Collisions</h1>
+        <p>Following <b>word cloud</b> illustrates the leading causes for collisions.
+
+        
+
+<div class='tableauPlaceholder' id='viz1524709086250' style='position: relative'><div class='tableauPlaceholder' id='viz1555552139478' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;ContributingFactorwordcloud&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;ContributingFactorwordcloud' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;ContributingFactorwordcloud&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555552139478');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524409086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></div></object></div></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524709086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<section class="py-5">
+      <div class="container">
+         <p><b>Driver Inattention / Distraction</b> is the leading contributing factor followed by Failure to yield right of the way.</p>
+      </div>
+</section>
+
+
+<section class="py-5">
+      <div class="container">
+        <p>Multiple bar charts illustrate collision by contributing factor in different boroughs.You can use additional filters such as year and vehicle type  to explore the data further.</p>
+
+
+
+
+
+<div class='tableauPlaceholder' id='viz1524709086250' style='position: relative'><div class='tableauPlaceholder' id='viz1524409086250' style='position: relative'><div class='tableauPlaceholder' id='viz1555551725221' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsbycontribfactorsinboroughs-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYPDW209FinalProjectDraft&#47;Collisionsbycontribfactorsinboroughs-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYPDW209FinalProjectDraft&#47;Collisionsbycontribfactorsinboroughs-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555551725221');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524409086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></object></div></div></object></div></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1524709086250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<section class="py-5">
+      <div class="container">
+         <p><b> This chart confirms that Driver Inattention / Distraction</b> is the leading contributing factor across all boroughs.</p>
+         <p>This insight shows that traffic collision patterns in New York is in sync with the National Highway Traffic Safety Administration’s analysis that human error is the leading cause of all the accidents in US.</p>
+         <p>The  automobile manufacturers and tech companies are already taking major initiatives to develop <b>self-driving</b> technology as a solution to help reduce collisions and accident-related injuries.
+         But full autonomy which works seamlessly for all use cases , at all streets at all weathers and at scale would be years if not decade away. It would be important for city planners and dmv officials to ensure that self driving technology is rolled out in safest manner possible and at places where it would have max impact in bringing down count of accidents.</p>
+
+         <p>By analyzing the impact of human errors in number of collisions and fatal collisions as well as identifying the most dangerous boroughs, zip codes and cross streets, city planners can make informed decisions about how and where to roll-out the self driving cars.</p>
+
+      </div>
+</section>
+ 
+    <footer>
+
+     <div class="meta">BY <b>NACH MOHAN</b>, <b>SANDIP PALIT</b>, <b>ARJUN CHAKRABORTY</b>,</div>
+        <div class="meta">W209   /  SPRING 2019  /  MIDS, UC BERKELEY</div>
+ 
+    </footer>
+    
+
+  </body>
+</html>  

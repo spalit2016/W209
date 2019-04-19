@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+h1 {
+color:blue;        
+    }
+path {
+}
+
+path:hover {
+  
+}
+.sidebar {
+  background-color: #E6E226;
+  font-size:20px
+}
+    }
+.sidebar a{
+    padding:15px
+    color:red
+    
+    }
+.sidebar a:hover:not(.active) {
+  background-color: #6BEA25;
+  color: blue;
+}
+</style>
+<body>
+
+ <div id="Dropdown" align = "center">
+        <label>Month : </label>
+</div>
+    
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script>
+    
+    
+var width = 900,
+    height = 950;
+
+var svg = d3.select( "body" )
+  .append( "svg" )
+  .attr( "width", width )
+  .attr( "height", height );
+
+var g = svg.append( "g" );
+var markersG = svg.append("g");
+
+var albersProjection = d3.geoAlbers()
+  .scale( 100000 )
+  .rotate( [74.006,0] )
+  .center( [0, 40.712] )
+  .translate( [width/2,height/2] );
+
+var latLongProjection = d3.geoMercator()
+  .scale(width / 2 / Math.PI)
+  .translate( [width/2,height/2] );
+
+var geoPath = d3.geoPath()
+    .projection( albersProjection )
+    .pointRadius(1);
+
+function click(a){
+    window.location.assign("https://www1.nyc.gov/html/dot/html/motorist/wkndtraf.shtml#"+a.replace(/\s/g, '').toLowerCase());
+ };
+    
+function highlight(b){
+    markersG.selectAll("path").attr('opacity',function(d,i) { if (d3.geoContains(b,d.geometry.coordinates)) {return 1;} else {return 0;}});
+}   
+    
+var url = 'data/nynta_2.json';
+
+
+    
+//var color=d3.scaleSequential(d3.interpolateReds)
+    
+d3.json(url, function(error, geojson) {
+console.log(geojson);
+g.selectAll( "path" )
+  .data( geojson.features )
+  .enter()
+  .append( "path" )
+  .attr( "d", geoPath )
+    .attr("opacity",function(d,i) { return d.properties.accidents_count/(d.properties.population);console.log(d.properties.accidents_count/(d.properties.population));})
+    .attr( "fill", "red")
+    .on("mouseover",function(d,i) { highlight(d); d3.select(this).attr("opacity",function(d,i) { 
+    return d.properties.accidents_count/(d.properties.population);console.log(d.properties.accidents_count/(d.properties.population));}) 
+        })
+    .on("click",function(d,i) { click(geojson.features[i].properties.BoroName); 
+        });
+});
+//Add options to the dropdown list
+//Define dropdown options
+var month = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+var dropdownButton = d3.select("#Dropdown")
+                       .append("select");
+    
+dropdownButton
+  .selectAll("option")
+	.data(month)
+  .enter()
+	.append("option")
+  .text(function (d) { return d; })
+  .attr("value", function (d) { return d;conols.log(d); });
+
+//Variables to store the selected option and filtered data
+var a=1;
+
+
+//Call the chart with all data initially
+update(a);
+
+dropdownButton.on("change", function(d) {
+
+  // recover the option that has been chosen
+  a = d3.select(this).property("value");
+ console.log(a);
+  // run the update function with this selected option
+  update(a);
+});
+
+function update(b){
+var pointsUrl = 'data/points_'+a.toString()+'.json';  
+d3.json(pointsUrl, function(error, latLongPoints) {
+    console.log(latLongPoints);
+        markersG.selectAll("path")
+            .data(latLongPoints.features)
+            .enter()
+            .append('path')
+            .attr('fill', '#900')
+            .attr('stroke', '#999')
+            .attr('opacity',0)
+            .attr('d', geoPath)
+                .on("click",function(d,i) { d3.select(this).attr("fill", "blue");
+        });
+});};
+//Handle the dropdown change event
+dropdownButton.on("change", function(d) {
+
+  // recover the option that has been chosen
+  selectedOption = d3.select(this).property("value");
+
+  // run the update function with this selected option
+  update(selectedOption);
+});
+
+</script>
+

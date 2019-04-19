@@ -1,0 +1,75 @@
+#chart1 {
+  margin-right: 50px;
+  margin-left: 50px;
+  height:900px;
+  border-style: solid;
+  border-width: 2px;
+  background-color:LightYellow;
+}
+
+#chart2 {
+  margin-right: 100px;
+  margin-left: 100px;
+  height: 570px;
+  border-style: solid;
+  border-width: 2px;
+  background-color:LightGreen;
+}
+
+#map__container {
+  margin-left:10px;
+  margin-right:10px;
+  padding:0 10px 0 0;
+}
+
+#yeardropdown {
+  position:relative;
+  top:14px; 
+}
+
+.button {
+   position:relative;
+   top:50px;
+   border: 1px outset #b37d00 ;
+   background-color: Green;
+   color: white;
+}
+
+#map_container2 {
+   height: 565px;
+   width:905px;
+}
+
+.accidents-count-row
+      {
+          background-color: #39CCCC;
+
+      }
+.accidents-table
+         {
+           border: 2px solid black;
+           padding: 1px 1px 1px 0px;
+           margin-right: 10px;
+
+          
+      }
+
+.accidents-table-header
+       {
+           background-color: #DDDDDD;
+           font-weight: 400;
+           font-family:"avenir next", Arial, sans-serif;
+
+
+       }      
+
+.meta {
+    margin-bottom: 20px;
+    margin: 0 0 10px 0;
+    color: #444;
+    line-height: 1.5em;
+    font-size: .7em;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+}       

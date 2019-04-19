@@ -1,0 +1,196 @@
+Month,Borough,Accidents Count
+2017-03,Bronx,2828
+2017-03,Brooklyn,5358
+2017-03,Staten Island,977
+2017-03,Manhattan,3757
+2017-03,Queens,5185
+2017-04,Bronx,2607
+2017-04,Brooklyn,4805
+2017-04,Staten Island,866
+2017-04,Manhattan,3616
+2017-04,Queens,4615
+2017-05,Bronx,3089
+2017-05,Brooklyn,5786
+2017-05,Staten Island,1008
+2017-05,Manhattan,4168
+2017-05,Queens,5480
+2018-12,Bronx,2723
+2018-12,Brooklyn,5209
+2018-12,Staten Island,1053
+2018-12,Manhattan,3544
+2018-12,Queens,5287
+2017-06,Bronx,3078
+2017-06,Brooklyn,5943
+2017-06,Staten Island,1052
+2017-06,Manhattan,4224
+2017-06,Queens,5593
+2018-10,Bronx,2892
+2018-10,Brooklyn,5584
+2018-10,Staten Island,1092
+2018-10,Manhattan,3889
+2018-10,Queens,5566
+2018-11,Bronx,2746
+2018-11,Brooklyn,5237
+2018-11,Staten Island,993
+2018-11,Manhattan,3671
+2018-11,Queens,5222
+2017-07,Bronx,2777
+2017-07,Brooklyn,5414
+2017-07,Staten Island,935
+2017-07,Manhattan,3741
+2017-07,Queens,5265
+2019-02,Bronx,2267
+2019-02,Brooklyn,4368
+2019-02,Staten Island,812
+2019-02,Manhattan,2826
+2019-02,Queens,4349
+2019-03,Bronx,345
+2019-03,Brooklyn,610
+2019-03,Staten Island,120
+2019-03,Manhattan,328
+2019-03,Queens,611
+2019-01,Bronx,2432
+2019-01,Brooklyn,4619
+2019-01,Staten Island,824
+2019-01,Manhattan,2917
+2019-01,Queens,4600
+2017-12,Bronx,2887
+2017-12,Brooklyn,5297
+2017-12,Staten Island,1083
+2017-12,Manhattan,3659
+2017-12,Queens,5375
+2017-11,Bronx,2742
+2017-11,Brooklyn,5316
+2017-11,Staten Island,1047
+2017-11,Manhattan,3776
+2017-11,Queens,5261
+2017-10,Bronx,2996
+2017-10,Brooklyn,5419
+2017-10,Staten Island,1036
+2017-10,Manhattan,3920
+2017-10,Queens,5205
+2016-10,Bronx,2711
+2016-10,Brooklyn,5215
+2016-10,Staten Island,998
+2016-10,Manhattan,3959
+2016-10,Queens,5305
+2016-11,Bronx,2691
+2016-11,Brooklyn,5329
+2016-11,Staten Island,961
+2016-11,Manhattan,3969
+2016-11,Queens,5139
+2016-12,Bronx,2761
+2016-12,Brooklyn,5275
+2016-12,Staten Island,1090
+2016-12,Manhattan,3728
+2016-12,Queens,5214
+2017-08,Bronx,2731
+2017-08,Brooklyn,5187
+2017-08,Staten Island,904
+2017-08,Manhattan,3741
+2017-08,Queens,4985
+2017-09,Bronx,2833
+2017-09,Brooklyn,5297
+2017-09,Staten Island,964
+2017-09,Manhattan,3936
+2017-09,Queens,4910
+2018-09,Bronx,2766
+2018-09,Brooklyn,5167
+2018-09,Staten Island,906
+2018-09,Manhattan,3665
+2018-09,Queens,5273
+2018-08,Bronx,2954
+2018-08,Brooklyn,5549
+2018-08,Staten Island,926
+2018-08,Manhattan,3562
+2018-08,Queens,5183
+2018-01,Bronx,2632
+2018-01,Brooklyn,5091
+2018-01,Staten Island,919
+2018-01,Manhattan,3265
+2018-01,Queens,5006
+2017-01,Bronx,2547
+2017-01,Brooklyn,4925
+2017-01,Staten Island,910
+2017-01,Manhattan,3265
+2017-01,Queens,4689
+2018-03,Bronx,2766
+2018-03,Brooklyn,5301
+2018-03,Staten Island,967
+2018-03,Manhattan,3533
+2018-03,Queens,5184
+2018-02,Bronx,2394
+2018-02,Brooklyn,4287
+2018-02,Staten Island,775
+2018-02,Manhattan,3027
+2018-02,Queens,4331
+2018-05,Bronx,3067
+2018-05,Brooklyn,5731
+2018-05,Staten Island,1041
+2018-05,Manhattan,3774
+2018-05,Queens,5596
+2018-04,Bronx,2720
+2018-04,Brooklyn,4878
+2018-04,Staten Island,931
+2018-04,Manhattan,3450
+2018-04,Queens,4834
+2018-07,Bronx,2933
+2018-07,Brooklyn,5478
+2018-07,Staten Island,933
+2018-07,Manhattan,3521
+2018-07,Queens,5367
+2018-06,Bronx,3076
+2018-06,Brooklyn,5727
+2018-06,Staten Island,1078
+2018-06,Manhattan,3864
+2018-06,Queens,5522
+2016-07,Bronx,2550
+2016-07,Brooklyn,5051
+2016-07,Staten Island,937
+2016-07,Manhattan,3836
+2016-07,Queens,4563
+2016-06,Bronx,2446
+2016-06,Brooklyn,5249
+2016-06,Staten Island,1003
+2016-06,Manhattan,3914
+2016-06,Queens,4822
+2016-05,Bronx,2642
+2016-05,Brooklyn,4911
+2016-05,Staten Island,883
+2016-05,Manhattan,3719
+2016-05,Queens,4704
+2016-04,Bronx,1337
+2016-04,Brooklyn,2088
+2016-04,Staten Island,333
+2016-04,Manhattan,1605
+2016-04,Queens,2415
+2016-03,Bronx,1622
+2016-03,Brooklyn,3461
+2016-03,Staten Island,528
+2016-03,Manhattan,2956
+2016-03,Queens,3484
+2016-02,Bronx,1756
+2016-02,Brooklyn,4064
+2016-02,Staten Island,584
+2016-02,Manhattan,3383
+2016-02,Queens,3747
+2016-01,Bronx,1986
+2016-01,Brooklyn,4622
+2016-01,Staten Island,698
+2016-01,Manhattan,3317
+2016-01,Queens,4440
+2017-02,Bronx,2411
+2017-02,Brooklyn,4334
+2017-02,Staten Island,825
+2017-02,Manhattan,3035
+2017-02,Queens,4187
+2016-09,Bronx,2681
+2016-09,Brooklyn,5394
+2016-09,Staten Island,955
+2016-09,Manhattan,3981
+2016-09,Queens,5150
+2016-08,Bronx,2753
+2016-08,Brooklyn,5448
+2016-08,Staten Island,886
+2016-08,Manhattan,3968
+2016-08,Queens,5231
